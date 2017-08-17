@@ -1,0 +1,34 @@
+//
+//  LX.pch
+//  LXCardSearch
+//
+//  Created by zhongzhi on 2017/8/16.
+//  Copyright © 2017年 漫漫. All rights reserved.
+//
+
+#ifndef LX_pch
+#define LX_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "UIColor+NCColor.h"
+#import "UIColor+Expanded.h"
+#import "LxButton.h"
+#import "FTTextField.h"
+#import "UILabel+LXLabel.h"
+
+#import "UIView+Frame.h"
+#import "SDAutoLayout.h"
+#define Device_Width  [[UIScreen mainScreen] bounds].size.width//获取屏幕宽高
+#define Device_Height [[UIScreen mainScreen] bounds].size.height
+
+//#define LBColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+#define LBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define LBRandomColor LBColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+#define  Font(f) [UIFont systemFontOfSize:(f)]
+#define NCWS(weakSelf)  __weak __typeof(&*self)weakSelf = self
+
+#define kSystemVersion [[[UIDevice currentDevice] systemVersion] floatValue]
+#import "UINavigationController+FDFullscreenPopGesture.h"
+#endif /* LX_pch */
